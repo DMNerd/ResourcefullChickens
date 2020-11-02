@@ -1,4 +1,4 @@
-package com.dmnerd.resourcefullchickens.frequent;
+package main.java.com.dmnerd.resourcefullchickens.frequent;
 
 public class Resources {
     public static final String MODID = "resourcefullchickens";

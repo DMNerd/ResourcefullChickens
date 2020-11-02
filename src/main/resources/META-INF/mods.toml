@@ -1,11 +1,12 @@
 modLoader="javafml"
 loaderVersion="[${loader_version},)"
+issueTrackerURL="https://github.com/DMNerd/ResourcefullChickens/issues"
 license="MIT"
 
 
     [[mods]]
       modId="resourcefullchickens"
-      version="1.0.0.0"
+      version="${version}"
       displayName="ResourceFull Chickens"
       logoFile="assets/resourcefullchickens/textures/logo.png"
       credits="I'd like to thank my mother"
@@ -18,7 +19,7 @@ license="MIT"
       [[dependencies.resourcefullchickens]]
         modId="forge"
         mandatory=true
-        versionRange="[31,)"
+        versionRange="[${forge_version},)"
         ordering="NONE"
         side="BOTH"
 
