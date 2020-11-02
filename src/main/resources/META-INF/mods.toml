@@ -4,28 +4,26 @@ issueTrackerURL="https://github.com/DMNerd/ResourcefullChickens/issues"
 license="MIT"
 
 
-    [[mods]]
-      modId="resourcefullchickens"
-      version="${version}"
-      displayName="ResourceFull Chickens"
-      logoFile="assets/resourcefullchickens/textures/logo.png"
-      credits="I'd like to thank my mother"
-      authors="Author"
-      description='''
-      1.16 resource chcicken mod inspired by Chickens
-      '''
-	  
+[[mods]]
+modId="resourcefullchickens"
+version="${version}"
+displayName="ResourceFull Chickens"
+logoFile="assets/resourcefullchickens/textures/logo.png"
+authors="Author"
+description='''
+1.16 resource chcicken mod inspired by Chickens
+'''
+	
+[[dependencies.resourcefullchickens]]
+    modId="forge"
+    mandatory=true
+    versionRange="[${forge_version},)"
+    ordering="NONE"
+    side="BOTH"
 
-      [[dependencies.resourcefullchickens]]
-        modId="forge"
-        mandatory=true
-        versionRange="[${forge_version},)"
-        ordering="NONE"
-        side="BOTH"
-
-      [[dependencies.resourcefullchickens]]
-        modId="minecraft"
-        mandatory=true
-        versionRange="[1.16.3]"
-        ordering="NONE"
-        side="BOTH
+[[dependencies.resourcefullchickens]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[${mc_version}]"
+    ordering="NONE"
+    side="BOTH
