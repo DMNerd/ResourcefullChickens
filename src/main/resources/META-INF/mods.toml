@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[${loader_version},)"
+license="MIT"
+
+
+    [[mods]]
+      modId="resourcefullchickens"
+      version="1.0.0.0"
+      displayName="ResourceFull Chickens"
+      logoFile="assets/resourcefullchickens/textures/logo.png"
+      credits="I'd like to thank my mother"
+      authors="Author"
+      description='''
+      1.16 resource chcicken mod inspired by Chickens
+      '''
+	  
+
+      [[dependencies.resourcefullchickens]]
+        modId="forge"
+        mandatory=true
+        versionRange="[31,)"
+        ordering="NONE"
+        side="BOTH"
+
+      [[dependencies.resourcefullchickens]]
+        modId="minecraft"
+        mandatory=true
+        versionRange="[1.16.3]"
+        ordering="NONE"
+        side="BOTH
