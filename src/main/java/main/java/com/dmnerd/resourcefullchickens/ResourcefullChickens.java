@@ -1,7 +1,10 @@
 package main.java.com.dmnerd.resourcefullchickens;
 
+import main.java.com.dmnerd.resourcefullchickens.content.creativetab.ChickenItemGroup;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensBlocks;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensItems;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,6 +16,8 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod(Resources.MODID)
 public class ResourcefullChickens {
+
+    public static ItemGroup chickenTab = new ChickenItemGroup();
 
     public static Logger logger = LogManager.getLogger();
 
@@ -28,6 +33,10 @@ public class ResourcefullChickens {
     public static Registrate registrate()
     {
         return REGISTRATE.get();
+    }
+
+    public static ResourceLocation asResource(String path) {
+        return new ResourceLocation(Resources.MODID, path);
     }
 
 
