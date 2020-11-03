@@ -1,10 +1,13 @@
 package main.java.com.dmnerd.resourcefullchickens;
 
 import main.java.com.dmnerd.resourcefullchickens.content.creativetab.ChickenItemGroup;
+import main.java.com.dmnerd.resourcefullchickens.content.integration.RSMekanismChickensItems;
+import main.java.com.dmnerd.resourcefullchickens.content.integration.RSMysticalChickensItems;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensBlocks;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.ModList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,11 +24,14 @@ public class ResourcefullChickens {
 
     public static Logger logger = LogManager.getLogger();
 
-    private static final NonNullLazyValue<Registrate> REGISTRATE = new NonNullLazyValue<>(() -> Registrate.create(Resources.MODID));
+    private static final NonNullLazyValue<Registrate> REGISTRATE = new NonNullLazyValue<>(() -> Registrate.create(Resources.MODID).itemGroup(() -> ResourcefullChickens.chickenTab));
 
     public ResourcefullChickens(){
         RChickensItems.register();
         RChickensBlocks.register();
+
+        if (ModList.get().isLoaded("mysticalagriculture")) RSMysticalChickensItems.register();
+        if (ModList.get().isLoaded("mekanism")) RSMekanismChickensItems.register();
     }
 
     public static ResourcefullChickens instance;
