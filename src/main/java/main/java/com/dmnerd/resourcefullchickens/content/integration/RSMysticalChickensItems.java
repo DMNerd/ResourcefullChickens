@@ -9,11 +9,6 @@ public class RSMysticalChickensItems {
 
     private static final Registrate REGISTRATE = ResourcefullChickens.registrate();
 
-    public static final ItemEntry<ChickenItem> CHICKEN_INFFERIUM = REGISTRATE
-            .item("chicken_inferium", ChickenItem::new)
-            .properties(properties -> properties.maxStackSize(16))
-            .lang("Inferium Chicken")
-            .register();
 
     public static void register(){}
 }
