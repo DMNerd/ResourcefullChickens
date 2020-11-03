@@ -11,4 +11,8 @@ public class DependencyCheck
     public static boolean isMysticalAgricultureLoaded(){
         return ModList.get().isLoaded("mysticalagriculture");
     }
+
+    public static boolean isImmersiveEngineeringLoaded(){
+        return ModList.get().isLoaded("immersiveengineering");
+    }
 }
