@@ -1,29 +1,27 @@
 modLoader="javafml"
-loaderVersion="[${loader_version},)"
-issueTrackerURL="https://github.com/DMNerd/ResourcefullChickens/issues"
+loaderVersion="[34,)"
+#issueTrackerURL=""
 license="MIT"
-
 
 [[mods]]
 modId="resourcefullchickens"
-version="${version}"
+version="${file.jarVersion}"
 displayName="ResourceFull Chickens"
-logoFile="assets/resourcefullchickens/textures/logo.png"
-authors="Author"
+#updateJSONURL=""
+authors="DMNerd"
 description='''
-1.16 resource chcicken mod inspired by Chickens
-'''
-	
-[[dependencies.resourcefullchickens]]
-    modId="forge"
-    mandatory=true
-    versionRange="[${forge_version},)"
-    ordering="NONE"
-    side="BOTH"
+1.16 Resource chickens inspired by Chickens.'''
 
 [[dependencies.resourcefullchickens]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[${mc_version}]"
-    ordering="NONE"
-    side="BOTH
+modId="forge"
+mandatory=true
+versionRange="[34.0.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.resourcefullchickens]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.3,1.17)"
+ordering="NONE"
+side="BOTH"
