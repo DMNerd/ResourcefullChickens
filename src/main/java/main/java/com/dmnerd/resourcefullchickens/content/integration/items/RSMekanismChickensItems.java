@@ -1,4 +1,4 @@
-package main.java.com.dmnerd.resourcefullchickens.content.integration;
+package main.java.com.dmnerd.resourcefullchickens.content.integration.items;
 
 import com.tterrag.registrate.Registrate;
 import main.java.com.dmnerd.resourcefullchickens.ResourcefullChickens;
