@@ -59,6 +59,11 @@ public class RChickensItems {
             .lang("Coal Chicken")
             .properties(properties -> properties.maxStackSize(16))
             .register();
+    public static ItemEntry<ChickenItem> CHICKEN_HONEY = REGISTRATE
+            .item("chicken_honey", ChickenItem::new)
+            .lang("Honey Chicken")
+            .properties(properties -> properties.maxStackSize(16))
+            .register();
 
 
     public static void register() {}

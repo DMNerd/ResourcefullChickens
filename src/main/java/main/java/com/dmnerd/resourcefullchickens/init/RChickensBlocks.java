@@ -1,11 +1,22 @@
 package main.java.com.dmnerd.resourcefullchickens.init;
 
 import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import main.java.com.dmnerd.resourcefullchickens.ResourcefullChickens;
+import main.java.com.dmnerd.resourcefullchickens.init.blocks.RoostBoxBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 
 public class RChickensBlocks {
-    private static final Registrate REGISTRATE = ResourcefullChickens.registrate();
 
+    public static final BlockEntry<RoostBoxBlock> ROOST_BOX = ResourcefullChickens.registrate()
+            .object("roost_box")
+            .block(Material.WOOD, RoostBoxBlock::new)
+            .lang("Roost Box")
+            .properties(properties -> properties.sound(SoundType.WOOD))
+            .item()
+            .build()
+            .register();
 
 
     public static void register() {}
