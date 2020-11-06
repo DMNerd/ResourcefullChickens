@@ -5,9 +5,8 @@ import net.minecraft.item.Item;
 
 public class ChickenItem extends Item{
 
-
-
     public ChickenItem(Properties properties) {
         super(properties);
+        properties.maxStackSize(16);
     }
 }

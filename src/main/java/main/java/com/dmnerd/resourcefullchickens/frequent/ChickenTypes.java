@@ -17,6 +17,10 @@ public class ChickenTypes {
     public static final String COAL = prefix + "coal";
     public static final String HONEY = prefix + "honey";
 
+    //Common Chickens
+    public static final String COPPER = prefix + "copper";
+    public static final String STEEL = prefix + "steel";
+
     //Mystical Agriculture
     public static final String INFERIUM = prefix + "inferium";
     public static final String PRUDENTIUM = prefix + "prudentium";
@@ -24,6 +28,8 @@ public class ChickenTypes {
     public static final String IMPERIUM = prefix + "imperium";
     public static final String SUPREMIUM = prefix+ "supremium";
 
-    
+    //Mekanism
+
+    //Immersive Engineering
 
 }

@@ -1,14 +1,14 @@
 package main.java.com.dmnerd.resourcefullchickens;
 
+import com.tterrag.registrate.providers.ProviderType;
 import main.java.com.dmnerd.resourcefullchickens.content.creativetab.ChickenItemGroup;
 import main.java.com.dmnerd.resourcefullchickens.content.integration.DependencyCheck;
 import main.java.com.dmnerd.resourcefullchickens.content.integration.items.RSMekanismChickensItems;
 import main.java.com.dmnerd.resourcefullchickens.content.integration.items.RSMysticalChickensItems;
-import main.java.com.dmnerd.resourcefullchickens.init.RChickensBlocks;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensItems;
-import main.java.com.dmnerd.resourcefullchickens.init.RChickensTileEntities;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.util.NonNullLazy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,16 +21,18 @@ import net.minecraftforge.fml.common.Mod;
 @Mod(References.MODID)
 public class ResourcefullChickens {
 
-    public static ItemGroup chickenTab = new ChickenItemGroup();
+    public static final NonNullLazy<ItemGroup> chickenTab = NonNullLazy.of(ChickenItemGroup::new);
 
     public static Logger LOGGER = LogManager.getLogger();
 
-    private static final NonNullLazyValue<Registrate> REGISTRATE = new NonNullLazyValue<>(() -> Registrate.create(References.MODID).itemGroup(() -> ResourcefullChickens.chickenTab));
+    private static final NonNullLazyValue<Registrate> CHICKENS_REGISTRATE = new NonNullLazyValue<>(() ->
+            Registrate.create(References.MODID)
+                    .itemGroup(chickenTab::get));
 
     public ResourcefullChickens(){
         RChickensItems.register();
-        RChickensBlocks.register();
-        RChickensTileEntities.register();
+        //RChickensBlocks.register();
+        //RChickensTileEntities.register();
 
         //Common Chickens
 
@@ -38,18 +40,21 @@ public class ResourcefullChickens {
         if (DependencyCheck.isMekanismLoaded()) RSMysticalChickensItems.register();
         //Mystical Agriculture specific Chickens
         if (DependencyCheck.isMysticalAgricultureLoaded()) RSMekanismChickensItems.register();
+
+        registrate().addLang("itemGroup", asResource(""), References.MODNAME);
     }
 
     public static ResourcefullChickens instance;
 
     public static Registrate registrate()
     {
-        return REGISTRATE.get();
+        return CHICKENS_REGISTRATE.get();
     }
 
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(References.MODID, path);
     }
+
 
 
 }

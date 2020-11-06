@@ -14,7 +14,6 @@ public class RChickensBlocks {
             .lang("Roost Box")
             .properties(properties -> properties.sound(SoundType.WOOD))
             .simpleItem()
-            .blockstate()
             .register();
 
 
