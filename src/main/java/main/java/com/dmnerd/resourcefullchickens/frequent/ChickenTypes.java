@@ -4,6 +4,7 @@ public class ChickenTypes {
 
     public static final String prefix = "chicken_";
 
+    //Vanilla
     public static final String BASIC = prefix + "base";
     public static final String IRON = prefix + "iron";
     public static final String GOLD = prefix + "gold";
@@ -15,5 +16,14 @@ public class ChickenTypes {
     public static final String QUARTZ = prefix + "quartz";
     public static final String COAL = prefix + "coal";
     public static final String HONEY = prefix + "honey";
+
+    //Mystical Agriculture
+    public static final String INFERIUM = prefix + "inferium";
+    public static final String PRUDENTIUM = prefix + "prudentium";
+    public static final String TERTIUM = prefix + "tertium";
+    public static final String IMPERIUM = prefix + "imperium";
+    public static final String SUPREMIUM = prefix+ "supremium";
+
+    
 
 }
