@@ -10,4 +10,7 @@ public class RChickensTileEntities {
             .tileEntity("roost_box", RoostBoxTileEntity::new)
             .validBlock(RChickensBlocks.ROOST_BOX)
             .register();
+
+
+    public static void register(){}
 }

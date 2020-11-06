@@ -1,6 +1,6 @@
 package main.java.com.dmnerd.resourcefullchickens.content.creativetab;
 
-import main.java.com.dmnerd.resourcefullchickens.frequent.Resources;
+import main.java.com.dmnerd.resourcefullchickens.frequent.References;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
 public class ChickenItemGroup extends ItemGroup {
 
     public ChickenItemGroup() {
-        super(Resources.MODID);
+        super(References.MODID);
         setNoTitle();
         setBackgroundImageName("rchickens.png");
     }

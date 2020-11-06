@@ -6,29 +6,31 @@ import main.java.com.dmnerd.resourcefullchickens.content.integration.items.RSMek
 import main.java.com.dmnerd.resourcefullchickens.content.integration.items.RSMysticalChickensItems;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensBlocks;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensItems;
+import main.java.com.dmnerd.resourcefullchickens.init.RChickensTileEntities;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import main.java.com.dmnerd.resourcefullchickens.frequent.Resources;
+import main.java.com.dmnerd.resourcefullchickens.frequent.References;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.NonNullLazyValue;
 import net.minecraftforge.fml.common.Mod;
 
 
-@Mod(Resources.MODID)
+@Mod(References.MODID)
 public class ResourcefullChickens {
 
     public static ItemGroup chickenTab = new ChickenItemGroup();
 
-    public static Logger logger = LogManager.getLogger();
+    public static Logger LOGGER = LogManager.getLogger();
 
-    private static final NonNullLazyValue<Registrate> REGISTRATE = new NonNullLazyValue<>(() -> Registrate.create(Resources.MODID).itemGroup(() -> ResourcefullChickens.chickenTab));
+    private static final NonNullLazyValue<Registrate> REGISTRATE = new NonNullLazyValue<>(() -> Registrate.create(References.MODID).itemGroup(() -> ResourcefullChickens.chickenTab));
 
     public ResourcefullChickens(){
         RChickensItems.register();
         RChickensBlocks.register();
+        RChickensTileEntities.register();
 
         //Common Chickens
 
@@ -46,7 +48,7 @@ public class ResourcefullChickens {
     }
 
     public static ResourceLocation asResource(String path) {
-        return new ResourceLocation(Resources.MODID, path);
+        return new ResourceLocation(References.MODID, path);
     }
 
 
