@@ -10,12 +10,11 @@ import net.minecraft.block.material.Material;
 public class RChickensBlocks {
 
     public static final BlockEntry<RoostBoxBlock> ROOST_BOX = ResourcefullChickens.registrate()
-            .object("roost_box")
-            .block(Material.WOOD, RoostBoxBlock::new)
+            .block("roost_box", RoostBoxBlock::new)
             .lang("Roost Box")
             .properties(properties -> properties.sound(SoundType.WOOD))
-            .item()
-            .build()
+            .simpleItem()
+            .blockstate()
             .register();
 
 
