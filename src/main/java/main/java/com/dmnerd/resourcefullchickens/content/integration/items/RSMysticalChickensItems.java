@@ -4,11 +4,12 @@ import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import main.java.com.dmnerd.resourcefullchickens.ResourcefullChickens;
 import main.java.com.dmnerd.resourcefullchickens.frequent.ChickenTypes;
+import main.java.com.dmnerd.resourcefullchickens.frequent.References;
 import main.java.com.dmnerd.resourcefullchickens.init.items.ChickenItem;
 
 public class RSMysticalChickensItems {
 
-    private static final Registrate REGISTRATE = ResourcefullChickens.registrate();
+    private static final Registrate REGISTRATE = ResourcefullChickens.registrate().itemGroup(ResourcefullChickens.chickenTab::get, References.MODNAME);
 
     public static ItemEntry<ChickenItem> CHICKEN_INFERIUM = REGISTRATE
             .item(ChickenTypes.INFERIUM, ChickenItem::new)

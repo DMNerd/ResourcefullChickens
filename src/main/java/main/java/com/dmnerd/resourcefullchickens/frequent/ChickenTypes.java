@@ -20,6 +20,8 @@ public class ChickenTypes {
     //Common Chickens
     public static final String COPPER = prefix + "copper";
     public static final String STEEL = prefix + "steel";
+    public static final String URANIUM = prefix + "uranium";
+
 
     //Mystical Agriculture
     public static final String INFERIUM = prefix + "inferium";
