@@ -6,6 +6,7 @@ import main.java.com.dmnerd.resourcefullchickens.content.integration.DependencyC
 import main.java.com.dmnerd.resourcefullchickens.content.integration.items.RSCommonChickensItems;
 import main.java.com.dmnerd.resourcefullchickens.content.integration.items.RSMekanismChickensItems;
 import main.java.com.dmnerd.resourcefullchickens.content.integration.items.RSMysticalChickensItems;
+import main.java.com.dmnerd.resourcefullchickens.init.RChickensBlocks;
 import main.java.com.dmnerd.resourcefullchickens.init.RChickensItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
@@ -31,8 +32,7 @@ public class ResourcefullChickens {
 
     public ResourcefullChickens(){
         RChickensItems.register();
-        //RChickensBlocks.register();
-        //RChickensTileEntities.register();
+        RChickensBlocks.register();
 
         //Common Chickens
         RSCommonChickensItems.register();
