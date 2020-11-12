@@ -16,7 +16,7 @@ public class RSCommonChickensItems {
     public static ItemEntry<ChickenItem> CHICKEN_STEEL;
     public static ItemEntry<ChickenItem> CHICKEN_URANIUM;
 
-    public static void register(){
+    public static void init(){
 
         if (DependencyCheck.isMekanismLoaded() || DependencyCheck.isImmersiveEngineeringLoaded())
              CHICKEN_COPPER = REGISTRATE

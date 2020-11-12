@@ -9,5 +9,5 @@ public class RSMekanismChickensItems {
     private static final Registrate REGISTRATE = ResourcefullChickens.registrate().itemGroup(ResourcefullChickens.chickenTab::get, References.MODNAME);
 
 
-    public static void register(){}
+    public static void init(){}
 }

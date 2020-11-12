@@ -33,5 +33,5 @@ public class RSMysticalChickensItems {
             .register();
 
 
-    public static void register(){}
+    public static void init(){}
 }

@@ -25,31 +25,31 @@ public class ResourcefullChickens {
 
     public static final NonNullLazy<ItemGroup> chickenTab = NonNullLazy.of(ChickenItemGroup::new);
 
+    public static ResourcefullChickens instance;
+
     public static Logger LOGGER = LogManager.getLogger();
 
     private static final NonNullLazyValue<Registrate> REGISTRATE = new NonNullLazyValue<>(() ->
             Registrate.create(References.MODID));
 
     public ResourcefullChickens(){
-        RChickensItems.register();
-        RChickensBlocks.register();
+        RChickensItems.init();
+        //RChickensBlocks.init();
 
         //Common Chickens
-        RSCommonChickensItems.register();
+        RSCommonChickensItems.init();
         //Mekanism specific Chickens
-        if (DependencyCheck.isMekanismLoaded()) RSMysticalChickensItems.register();
+        if (DependencyCheck.isMekanismLoaded()) RSMysticalChickensItems.init();
         //Mystical Agriculture specific Chickens
-        if (DependencyCheck.isMysticalAgricultureLoaded()) RSMekanismChickensItems.register();
+        if (DependencyCheck.isMysticalAgricultureLoaded()) RSMekanismChickensItems.init();
     }
-
-    public static ResourcefullChickens instance;
 
     public static Registrate registrate()
     {
         return REGISTRATE.get();
     }
 
-    public static ResourceLocation asResource(String path) {
+    public static ResourceLocation rl(String path) {
         return new ResourceLocation(References.MODID, path);
     }
 

@@ -57,6 +57,6 @@ public class RChickensItems {
             .register();
 
 
-    public static void register() {}
+    public static void init() {}
 
 }
